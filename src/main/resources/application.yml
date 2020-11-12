@@ -1,0 +1,29 @@
+server:
+    port: 9300
+
+spring:
+    application:
+        name: logback-logstash-demo
+
+    
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    http:
+        encoding:
+            enabled: true
+            charset: UTF-8
+            force: true
+        multipart:
+            maxFileSize: 50MB
+            maxRequestSize: 50MB
+
+logback:
+    path: ${user.home}/logs
+    maxFileSize: 10MB
+    maxHistory: 90
+    level: INFO
+    fileName: demo
+
+logstash_server: 192.168.92.85
+logstash_port: 5100
